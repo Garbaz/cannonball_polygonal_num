@@ -1,6 +1,6 @@
 # Exhaustive search of numbers which are polygonal and a cannon ball number
 
-In [a Numberphile video](https://www.youtube.com/watch?v=q6L06pyt9CA) Matt Parker presented [his results](https://www.numberphile.com/cannon-ball-numbers) from a search he conducted for numbers which are [polygonal](https://en.wikipedia.org/wiki/Polygonal_number) and a cannon ball number (Can't find a wiki article about those). This is a C implementation for Linux (Should be easy to port to Windows C++) of a mostly "dumb" exhaustive search for more of these numbers.
+In [a Numberphile video](https://www.youtube.com/watch?v=q6L06pyt9CA) Matt Parker presented [his results](https://www.numberphile.com/cannon-ball-numbers) from a search he conducted for numbers which are [polygonal](https://en.wikipedia.org/wiki/Polygonal_number) and a cannon ball number (Can't find a wiki article about those). This is a C implementation of a mostly "dumb" exhaustive search for more of these numbers.
 
 I can't promise that the code is correct, but it does spit out all the examples from the video, so it seems to be working.
 
