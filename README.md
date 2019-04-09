@@ -18,7 +18,7 @@ or slightly rearranged:
 
 ![POLYGONAL NUMBER FORMULA 2](https://wikimedia.org/api/rest_v1/media/math/render/svg/3bd958e84a96b2601be5d9b758c169f88a44863b)
 
-To make the search slightly faster, we can use the following formula to calculate **P(s,n+1)** from **P(s,n)**:
+To make the search slightly faster, we can use the first of the following formula to calculate **P(s,n+1)** from **P(s,n)**:
 
 ![POLYGONAL NUMBER FORMULA 3](https://wikimedia.org/api/rest_v1/media/math/render/svg/cc5297af8722449c5805acc848b9dbce25b8e0d4)
  
