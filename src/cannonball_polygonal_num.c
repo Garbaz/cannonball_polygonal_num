@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <signal.h>
 
 /*
 "s_minus_2", "s-2", "sm2" refer to the number of sides minus 2.
@@ -41,26 +40,11 @@ unsigned long p_n_step(unsigned long curr_p, unsigned long s_minus_2, unsigned l
 
 unsigned long sm2 = START_SM2;
 
-
-// Not part of the calculation. Only here to print how far we got before the program was stopped.
-void ihl(int c)
-{
-	printf("Interrupted at s-2=%lu\n", sm2);
-	exit(0);
-}
-
 int main()
 {
-    // Not part of the calculation. Only here to enable us to print how far we got before the program was stopped.
-	if(signal(SIGINT,ihl) == SIG_ERR)
-	{
-		fprintf(stderr, "Can't catch interrupt signal!\n");
-		return 1;
-	}
-
     while(1) {
         // Uncomment the following line for the program to print it's current progress. This will slow down the search slightly.
-//        fprintf(stderr, "Currently at s-2=%lu\r", sm2);
+        if(sm2%10000000 == 0) fprintf(stderr, "\rCurrently at s-2=%lu", sm2);
 
         unsigned long n = START_N;
 #if START_N == 1 //We don't need to calculate p(s-2, n) every time if n=1, since p_res=1, independent of s-2.
