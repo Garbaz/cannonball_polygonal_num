@@ -28,9 +28,13 @@ unsigned long sm2 = START_SM2;
 
 int main()
 {
+#if MAX_SM2 > 0
+    while(sm2 < MAX_SM2) {
+#else
     while(1) {
+#endif
         // Uncomment the following line for the program to print it's current progress. This will slow down the search slightly.
-        if(sm2%10000000 == 0) fprintf(stderr, "\rCurrently at s-2=%lu", sm2);
+        if(sm2%100000 == 0) fprintf(stderr, "\rCurrently at s-2=%lu", sm2);
 
         unsigned long n = START_N;
 #if START_N == 1 //We don't need to calculate p(s-2, n) every time if n=1, since p_res=1, independent of s-2.
@@ -39,7 +43,7 @@ int main()
         unsigned long p_res = p(sm2, START_N);
 #endif
 
-#if MAX_N > 1
+#if MAX_N > 0
         while(n < MAX_N) {
 #else
         while(p_res < MAX_P) {
