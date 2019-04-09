@@ -48,7 +48,7 @@ to compile. The resulting binary should be in a new folder build/.
 
 ### Run/Configure
 
-To configure from where to where the program should search, you have to change the constants at the top of the source file. See the comment above them for what the different constants mean.
+To configure from where to where the program should search, you have to change the constants in [src/config.h](src/config.h) and compile. See the comment above them for what the different constants mean.
 
 ### Improvements
 
